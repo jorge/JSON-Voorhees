@@ -1,6 +1,8 @@
 JSON-Voorhees
 =============
 
+Credit @scott3rdfloor for the most amazing name for a JSON parser ever.
+
 Lightweight Objective-C category for parsing JSON into NSManagedObjects
 
 ####Usage
