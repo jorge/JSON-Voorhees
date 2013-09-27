@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import <objc/runtime.h>
 
+//Credit to Nathan Eror for this macro to display verbose core data error messages
+//http://www.freetimestudios.com/2009/11/13/core-data-tips-for-iphone-devs-part-2-better-error-messages/
 #define FT_SAVE_MOC(_ft_moc) \
 do { \
   NSError* _ft_save_error; \
