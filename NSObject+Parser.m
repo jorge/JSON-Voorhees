@@ -50,6 +50,11 @@
       else if ([attrClass isEqualToString:@"Tc"]) {
         [managedObject setValue:[NSNumber numberWithInt:[JSON[key] intValue]] forKey:mapping[key]];
       }
+      else if ([attrClass isEqualToString:@"T@\"NSDate\""]) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+        [managedObject setValue:[formatter dateFromString:JSON[key]] forKey:mapping[key]];
+      }
       else {
         [managedObject setValue:JSON[key] forKey:mapping[key]];
       }
